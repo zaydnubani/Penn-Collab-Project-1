@@ -114,7 +114,7 @@ nav{
     margin-right: 20px;
 }
 
-#valueInput{
+#inputValue{
     width: 250px;
 }
 
@@ -123,6 +123,18 @@ nav{
 }
 /* ``` */
 /* Criteria & Profile Value Input End */
+
+#tableButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 15px;
+}
+
+#createTable{
+    margin-left: 20px;
+}
 
 /* Criteria & Profile Value Input Table Start*/
 /* ``` */
@@ -261,6 +273,7 @@ th:nth-child(even),td:nth-child(even) {
 #graph #profile3  {
     left: 300px;
 }
+
 
 #graph #q4 {left: 450px; border-right: none;}
   #q-graph tbody th {bottom: -1.75em; vertical-align: top;
