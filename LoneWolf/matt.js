@@ -95,14 +95,12 @@
   $('#firstLink').click(function(){
     window.location= "https://pixe.la/v1/users/matt-crpss/graphs/project.html"
   });
-
   $('#secondLink').click(function(){
     window.location= "https://pixe.la/v1/users/matt-crpss/graphs/project"
   });
   $('#thirdLink').click(function(){
     window.location= "https://pixe.la/v1/users/matt-crpss/graphs/project.html"
   });
-
   fetch('https://pixe.la/v1/users/matt-crpss/graphs/project/stats')
   .then(function (response) {
     return response.json();
@@ -114,31 +112,7 @@
   });
 
 
-  fetch('https://pixe.la/v1/users/matt-crpss/graphs/project/stats')
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-    var dataString = JSON.stringify(data);
-    $("#pixela-graph").text(dataString);
-  });
-
-
-//   import request from 'request';
-//   var  options = {
-//   'method': 'PUT',
-//   'url': ' url: "https://pixe.la/v1/users/matt-crpss/graphs/project"',
-//   'headers': {
-//     'X-USER-TOKEN': '<yaaaaaaa>',
-//   },
-//   body: '@/unit/9/index.html'
-//   };
-// request(options, function (error, response) {
-//   if (error) throw new Error(error);
-//   console.log(response.body);
-// });
-
+// Send Criteria to Pixela
 var url = "https://pixe.la/v1/users/matt-crpss/graphs/project";
 
 var xhr = new XMLHttpRequest();
@@ -152,9 +126,18 @@ xhr.onreadystatechange = function () {
       console.log(xhr.responseText);
    }};
 
-var data = '{"date":"20211020","quantity":"9"}';
+var data = '{"date":"20211020","quantity":"8"}';
 
-xhr.send(data);
+// Turn string into current date
+// Add moment.date() to test function
 
+var currentDate = moment().format('YYYYMMDD');
+// $('#createtable').click( 
+var newData = data.replace('20211020',currentDate);
+console.log(newData);
+
+$('#createtable').click( xhr.send(newData));
+
+// Change Quantity
+var newQuantity = data.replace('quantity', )
 console.log(data);
-
