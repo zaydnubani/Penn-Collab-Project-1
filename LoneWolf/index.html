@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"/>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./matt.css" />
-<<<<<<< HEAD
     <link rel="stylesheet" href="./bulma.css" />
 
 </head>
@@ -21,51 +20,26 @@
     <div id="title" >Profile Tracker</div>
     <div class="has-background-primary" id="timeItems">
         <div class="headerItem has-background-warning-light" id="currentDay"></div>
-        <div class="headerItem has-background-warning-light" id="currentTime"></div>
+        <div class="headerItem has-background-warning-light" id="clock">loading ...</div>
     </div>
-=======
-    <link rel="stylesheet" href="./mike.css" />
-</head>
-<body>
-
-<header id="header-top">
-    <p  class=header-top-item id="currentDay"></p>
-    <h1 class=header-top-item>Profile tracker</h1>
-    <div id="clock">loading ...</div>
->>>>>>> 8015cff9ca1d15587db6dd225c630597d58e31cc
 </header>
 
 <nav>
     <div id="navContainer" class="has-background-warning">
         <ul id="navList">
             <li class="navLink">
-<<<<<<< HEAD
                 <button class="navButton has-background-danger-light" id="firstLink">
-            
+                    Pixela Profile Tracker
                 </button>
             </li>
             <li class="navLink">
-                <button class="navButton has-background-danger-light">
-                    "Nav Link 2 Goes Here"
+                <button class="navButton has-background-danger-light" id="secondLink">
+                    Pixela Graph
                 </button>
             </li>
             <li class="navLink">
                 <button class="navButton has-background-danger-light">
                     "Nav Link 3 Goes Here"
-=======
-                <button id="firstLink">
-                    Pixela Profile Tracker
-                </button>
-            </li>
-            <li class="navLink">
-                <button id="secondLink">
-                    Pixela Graph
-                </button>
-            </li>
-            <li class="navLink">
-                <button>
-                    
->>>>>>> 8015cff9ca1d15587db6dd225c630597d58e31cc
                 </button>
             </li>
         </ul>
@@ -74,7 +48,7 @@
 
 <Section id="mainContainer" class="has-background-danger">
     <section class="MCItem" id="profileCreate">
-        <div class="CORP has-background-light" id=PSelect value="profile">
+        <div class="CORP has-background-light" id="PSelect" data-value="profile">
             Profile
         </div>
         <input type="text" name="PInput" id="PInput" class="CPInput has-background-light" placeholder="Type your input here & click Submit." />
@@ -84,7 +58,7 @@
     </section>
     
     <section class="MCItem" id="criteriaCreate">
-        <div class="CORP has-background-light" id=CSelect value="criteria">
+        <div class="CORP has-background-light" id="CSelect" data-value="criteria">
             Criteria
         </div>
         <input type="text" name="CInput" id="CInput" class="CPInput has-background-light" placeholder="Type your input here & click Submit." />
@@ -149,110 +123,38 @@
             </tr>
         </table>
     </section>
+    <div>
+        <button class="tableButton has-background-light" id="submitTable">
+            submitTable
+        </button>
+    </div>
 </section>
 
 <section class="progressTracker">
     <div id="profile1" class="profile">
-        Profile 1
+        <span id="PTR1">Profile 1</span>
         <progress id="PT1C1" class="progress"  max="100">15%</progress>
         <progress id="PT1C2" class="progress"  max="100">15%</progress>
     </div>
     <div id="profile2" class="profile">
-        Profile 2
-        <progress id="PT2C1" class="progress" value="15" max="100">15%</progress>
-        <progress id="PT2C2" class="progress" value="15" max="100">15%</progress>
+        <span id="PTR2">Profile 2</span>
+        <progress id="PT2C1" class="progress"  max="100">15%</progress>
+        <progress id="PT2C2" class="progress"  max="100">15%</progress>
     </div>
     <div id="profile3" class="profile">
-        Profile 3
-        <progress id="PT3C1" class="progress" value="15" max="100">15%</progress>
-        <progress id="PT3C2" class="progress" value="15" max="100">15%</progress>
+        <span id="PTR3">Profile 3</span>
+        <progress id="PT3C1" class="progress"  max="100">15%</progress>
+        <progress id="PT3C2" class="progress"  max="100">15%</progress>
     </div>
     <div id="profile4" class="profile">
-        Profile 4
-        <progress id="PT4C1" class="progress" value="15" max="100">15%</progress>
-        <progress id="PT4C2" class="progress" value="15" max="100">15%</progress>
+        <span id="PTR4">Profile 4</span>
+        <progress id="PT4C1" class="progress" max="100">15%</progress>
+        <progress id="PT4C2" class="progress" max="100">15%</progress>
     </div>
 </section>
 
-<!-- <section id="CPValueGraph">
-    <table id="graph">
-        <caption id="caption">"Graph Title"</caption>
-        <thead>
-            <th class="sent">"Criteria 1 value"</th>
-            <th class="paid">"Criteria 2 value"</th>
-        </thead>
-        <tbody>
-            <tr class="qtr" id="profile1">
-                <th id="P1Tag" scope="row">
-                "Profile 1"
-                </th>
-                <td id="P1V1Bar" class="sent bar">
-                    <p id="P1V1">
-                        "Value 1 Here"
-                    </p>
-                </td>
-                <td id="P1V2Bar" class="paid bar">
-                    <p id="P1V2">
-                        "Value 2 Here"
-                    </p>
-                </td>
-            </tr>
-            <tr class="qtr" id="profile2">
-                <th id="P2Tag" scope="row">
-                "Profile 2"
-                </th>
-                <td class="sent bar" id="P2V1Bar">
-                    <p id="P2V1">
-                        "Value 1 Here"
-                    </p>
-                </td>
-                <td class="paid bar" id="P2V2Bar">
-                    <p id="P2V2">
-                        "Value 2 Here"
-                    </p>
-                </td>
-            </tr>
-            <tr class="qtr" id="profile3">
-                <th id="P3Tag" scope="row">
-                "Profile 3"
-                </th>
-                <td class="sent bar" id="P3V1Bar">
-                    <p id="P3V1">
-                        "Value 1 Here"
-                    </p>
-                </td>
-                <td class="paid bar" id="P3V2Bar">
-                    <p id="P3V2">
-                        "Value 2 Here"
-                    </p>
-                </td>
-            </tr>
-            <tr class="qtr" id="q4">
-                <th id="P4Tag" scope="row">
-                "Profile 4"
-                </th>
-                <td class="sent bar" id="P4V1Bar">
-                    <p id="P4V1">
-                        "Value 1 Here"
-                    </p>
-                </td>
-                <td class="paid bar" id="P4V2Bar">
-                    <p id="P4V2">
-                        "Value 2 Here"
-                    </p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div id="ticks">
-        <div class="tick" style="height: 59px;"></div>
-        <div class="tick" style="height: 59px;"></div>
-        <div class="tick" style="height: 59px;"></div>
-        <div class="tick" style="height: 59px;"></div>
-        <div class="tick" style="height: 59px;"></div>
-    </div>
-</section> -->
-    <div id="pixela-graph"> 
+<section>
+    <div id="pixela-stats"> 
     </div>
 </section>
 

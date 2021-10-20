@@ -25,21 +25,11 @@ function criteriaCreate() {
     var CSelect = document.querySelector("#CSelect");
     var CInput = document.querySelector("#CInput");
     var criteriaCreate = {
-        type: CSelect.value,
+        type: CSelect.dataset.value,
         input: CInput.value
      };
     criteria.push(criteriaCreate);
     localStorage.setItem("criteria", JSON.stringify(criteria));
-
-    // var CPTable = document.querySelector("#CPTable");
-    // CPTable.innerHTML = " ";
-
-    for(i=0;i<criteria.length;i++){
-        var criteriaSelect = document.querySelector('#criteriaSelect')
-        var criteriaOption = document.createElement("option");
-        var appendedCriteriaOption = criteriaSelect.appendChild(criteriaOption);
-        appendedCriteriaOption.innerHTML = criteria[i].input;
-    }
 }
 // ```
 // Criteria Create End
@@ -62,25 +52,13 @@ function profileCreate() {
     var PSelect = document.querySelector("#PSelect");
     var PInput = document.querySelector("#PInput");
     var profileCreate = {
-        type: PSelect.value,
+        type: PSelect.dataset.value,
         input: PInput.value
     };
     profile.push(profileCreate);
     // save to local storage and display new value
     localStorage.setItem("profile", JSON.stringify(profile));
     
-    // var CPTable = document.querySelector("#CPTable");
-    // CPTable.innerHTML = " ";
-
-    // var tableRow = document.getElementsByClassName("tableRow");
-    // tableRow.innerHTML = " ";
-
-    for(i=0;i<profile.length;i++){
-        var profileSelect = document.querySelector('#profileSelect')
-        var profileOption = document.createElement("option");
-        var appendedProfileOption = profileSelect.appendChild(profileOption);
-        appendedProfileOption.innerHTML = profile[i].input;
-    }
 }
 // ```
 // Profile Create End
@@ -91,9 +69,6 @@ var createTable = document.querySelector("#createTable");
 
 createTable.addEventListener("click", function(){
     table();
-    // graph();
-    progressTracker(0, PTprofile1, PT1C1, P1C1, PT1C2, P1C2);
-    testing();
 });
 
 function table(){
@@ -109,131 +84,157 @@ function table(){
     // Table Row 1
     var profile1 = document.querySelector("#profile1");
     profile1.innerHTML = profile[0].input;
+    profile1.setAttribute("data-name", profile[0].input)
+    console.log("profile[0].input");
 
     // Table Row 2
     var profile2 = document.querySelector("#profile2");
-    profile2.innerHTML = profile[0].input;
+    profile2.innerHTML = profile[1].input;
 
     // Table Row 3
     var profile3 = document.querySelector("#profile3");
-    profile3.innerHTML = profile[0].input;
+    profile3.innerHTML = profile[2].input;
 
     // Table Row 4
     var profile4 = document.querySelector("#profile4");
-    profile4.innerHTML = profile[0].input;
+    profile4.innerHTML = profile[3].input;
 };
 // ```
 // Table End
 
-function graph() {
-    var profile = JSON.parse(localStorage.getItem("profile"));
-
-    
-
-    // Profile 1
-    var P1Tag = document.querySelector("#P1Tag");
-    P1Tag.innerHTML = profile[0].input;
-    var P1C1 = document.querySelector("#P1C1");
-    var P1V1 = document.querySelector("#P1V1");
-    P1V1.innerHTML = P1C1.value;
-    var P1V1Bar = document.querySelector("#P1V1Bar");
-    P1V1Bar.setAttribute("style", "height: " + P1C1.value + "px;");
-    var P1C2 = document.querySelector("#P1C2");
-    var P1V2 = document.querySelector("#P1V2");
-    P1V2.innerHTML = P1C2.value;
-    var P1V2Bar = document.querySelector("#P1V2Bar");
-    P1V2Bar.setAttribute("style", "height: " + P1C2.value + "px;");
-
-    // Profile 2
-    var P2Tag = document.querySelector("#P2Tag");
-    P2Tag.innerHTML = profile[1].input;
-    var P2C1 = document.querySelector("#P2C1");
-    var P2V1 = document.querySelector("#P2V1");
-    P2V1.innerHTML = P2C1.value;
-    var P2V1Bar = document.querySelector("#P2V1Bar");
-    P2V1Bar.setAttribute("style", "height: " + P2C1.value + "px;");
-    var P2C2 = document.querySelector("#P2C2");
-    var P2V2 = document.querySelector("#P2V2");
-    P2V2.innerHTML = P2C2.value;
-    var P2V2Bar = document.querySelector("#P2V2Bar");
-    P2V2Bar.setAttribute("style", "height: " + P2C2.value + "px;");
-
-    // Profile 3
-    var P3Tag = document.querySelector("#P3Tag");
-    P3Tag.innerHTML = profile[2].input;
-    var P3C1 = document.querySelector("#P3C1");
-    var P3V1 = document.querySelector("#P3V1");
-    P3V1.innerHTML = P3C1.value;
-    var P3V1Bar = document.querySelector("#P3V1Bar");
-    P3V1Bar.setAttribute("style", "height: " + P3C1.value + "px;");
-    var P3C2 = document.querySelector("#P3C2");
-    var P3V2 = document.querySelector("#P3V2");
-    P3V2.innerHTML = P3C2.value;
-    var P3V2Bar = document.querySelector("#P3V2Bar");
-    P3V2Bar.setAttribute("style", "height: " + P3C2.value + "px;");
-
-    // Profile 4
-    var P4Tag = document.querySelector("#P4Tag");
-    P4Tag.innerHTML = profile[3].input;
-    var P4C1 = document.querySelector("#P4C1");
-    var P4V1 = document.querySelector("#P4V1");
-    P4V1.innerHTML = P4C1.value;
-    var P4V1Bar = document.querySelector("#P4V1Bar");
-    P4V1Bar.setAttribute("style", "height: " + P4C1.value + "px;");
-    var P4C2 = document.querySelector("#P4C2");
-    var P4V2 = document.querySelector("#P4V2");
-    P4V2.innerHTML = P4C2.value;
-    var P4V2Bar = document.querySelector("#P4V2Bar");
-    P4V2Bar.setAttribute("style", "height: " + P4C2.value + "px;");
-    
-}
-// Graph Start
+// Progress Tracker Start
 // ```
+var submitTable = document.querySelector("#submitTable");
 
-// Profile 1
-var PTprofile1 = document.querySelector("#profile1");
-var P1C1 = document.querySelector("#P1C1");
-var P1C2 = document.querySelector("#P1C2");
-var PT1C1 = document.querySelector("#PT1C1");
-var PT1C2 = document.querySelector("#PT1C2");
+submitTable.addEventListener("click", function(){
+    PT1();
+    PT2();
+    PT3();
+    PT4();
+    progressTracker();
+});
 
+function progressTracker(){
+    var PT2 = JSON.parse(localStorage.getItem("PT2"));
+    var PT3 = JSON.parse(localStorage.getItem("PT3"));
+    var PT4 = JSON.parse(localStorage.getItem("PT4"));
+    
+    // Profile 1
+    var PT1 = JSON.parse(localStorage.getItem("PT1"));
+    var PTR1 = document.querySelector("#PTR1");
+    var PT1C1 = document.querySelector("#PT1C1");
+    var PT1C2 = document.querySelector("#PT1C2");
+    PT1C1.setAttribute("value", PT1[0].criteria1);
+    PT1C2.setAttribute("value", PT1[0].criteria2);
+    PTR1.innerHTML = PT1[0].profile;
 
-// Profile 2
-var PTprofile2 = document.querySelector("#profile2");
-var P2C1 = document.querySelector("#P2C1");
-var P2C2 = document.querySelector("#P2C2");
-var PT2C1 = document.querySelector("#PT2C1");
-var PT2C2 = document.querySelector("#PT2C2");
+     // Profile 2
+     var PT2 = JSON.parse(localStorage.getItem("PT2"));
+     var PTR2 = document.querySelector("#PTR2");
+     var PT2C1 = document.querySelector("#PT2C1");
+     var PT2C2 = document.querySelector("#PT2C2");
+     PT2C1.setAttribute("value", PT2[0].criteria1);
+     PT2C2.setAttribute("value", PT2[0].criteria2);
+     PTR2.innerHTML = PT2[0].profile;
 
-
-// Profile 3
-var PTprofile3 = document.querySelector("#profile3");
-var P3C1 = document.querySelector("#P3C1");
-var P3C2 = document.querySelector("#P3C2");
-var PT3C1 = document.querySelector("#PT3C1");
-var PT3C2 = document.querySelector("#PT3C2");
-
-// Profile 4
-var PTprofile4 = document.querySelector("#profile4");
-var P4C1 = document.querySelector("#P4C1");
-var P4C2 = document.querySelector("#P4C2");
-var PT4C1 = document.querySelector("#PT4C1");
-var PT4C2 = document.querySelector("#PT4C2");
-
-function progressTracker(u, v, w, x, y, z){
-    var profile = JSON.parse(localStorage.getItem("profile"));
-    v.innerHTML = profile[u].input;
-    w.value = x;
-    y.value = z;
+     // Profile 3
+     var PT3 = JSON.parse(localStorage.getItem("PT3"));
+     var PTR3 = document.querySelector("#PTR3");
+     var PT3C1 = document.querySelector("#PT3C1");
+     var PT3C2 = document.querySelector("#PT3C2");
+     PT3C1.setAttribute("value", PT3[0].criteria1);
+     PT3C2.setAttribute("value", PT3[0].criteria2);
+     PTR3.innerHTML = PT3[0].profile;
+    
+     // Profile 4
+     var PT4 = JSON.parse(localStorage.getItem("PT4"));
+     var PTR4 = document.querySelector("#PTR4");
+     var PT4C1 = document.querySelector("#PT4C1");
+     var PT4C2 = document.querySelector("#PT4C2");
+     PT4C1.setAttribute("value", PT4[0].criteria1);
+     PT4C2.setAttribute("value", PT4[0].criteria2);
+     PTR4.innerHTML = PT4[0].profile;
 }
 
-function testing(){
+function PT1() {
     var profile = JSON.parse(localStorage.getItem("profile"));
-    // PTprofile1.innerHTML = profile[0].input;
-    PT1C1.setAttribute("value", "" + P1C1.value + "");
-    PT1C2.setAttribute("value", "" + P1C2.value + "");
-}
+    // Load from local storage
+    var PT1 = JSON.parse(localStorage.getItem("PT1"));
+    // Process the default value
+    if(PT1 == null) PT1 = [];
+    // Process the user input
+    var P1C1 = document.querySelector("#P1C1");
+    var P1C2 = document.querySelector("#P1C2");
+    var profileCreate = {
+        profile: profile[0].input,
+        criteria1: P1C1.value,
+        criteria2: P1C2.value
+    };
+    PT1.push(profileCreate);
+    // save to local storage and display new value
+    localStorage.setItem("PT1", JSON.stringify(PT1));
+    
+};
 
+function PT2() {
+    var profile = JSON.parse(localStorage.getItem("profile"));
+    // Load from local storage
+    var PT2 = JSON.parse(localStorage.getItem("PT2"));
+    // Process the default value
+    if(PT2 == null) PT2 = [];
+    // Process the user input
+    var P2C1 = document.querySelector("#P2C1");
+    var P2C2 = document.querySelector("#P2C2");
+    var profileCreate = {
+        profile: profile[1].input,
+        criteria1: P2C1.value,
+        criteria2: P2C2.value
+    };
+    PT2.push(profileCreate);
+    // save to local storage and display new value
+    localStorage.setItem("PT2", JSON.stringify(PT2));
+};
+
+function PT3() {
+    var profile = JSON.parse(localStorage.getItem("profile"));
+    // Load from local storage
+    var PT3 = JSON.parse(localStorage.getItem("PT3"));
+    // Process the default value
+    if(PT3 == null) PT3 = [];
+    // Process the user input
+    var P3C1 = document.querySelector("#P3C1");
+    var P3C2 = document.querySelector("#P3C2");
+    var profileCreate = {
+        profile: profile[2].input,
+        criteria1: P3C1.value,
+        criteria2: P3C2.value
+    };
+    PT3.push(profileCreate);
+    // save to local storage and display new value
+    localStorage.setItem("PT3", JSON.stringify(PT3));
+};
+
+function PT4() {
+    var profile = JSON.parse(localStorage.getItem("profile"));
+    // Load from local storage
+    var PT4 = JSON.parse(localStorage.getItem("PT4"));
+    // Process the default value
+    if(PT4 == null) PT4 = [];
+    // Process the user input
+    var P4C1 = document.querySelector("#P4C1");
+    var P4C2 = document.querySelector("#P4C2");
+    var profileCreate = {
+        profile: profile[3].input,
+        criteria1: P4C1.value,
+        criteria2: P4C2.value
+    };
+    PT4.push(profileCreate);
+    // save to local storage and display new value
+    localStorage.setItem("PT4", JSON.stringify(PT4));
+};
+
+// ```
+// Progress Tracker End
 
 
 
