@@ -1,0 +1,170 @@
+*{
+    font-family: 'Permanent Marker', cursive;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title{
+    font-size: xx-large;
+    padding: 10px;
+}
+
+#timeItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    width: 66%;
+    border: 5px solid lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 10px 10px;
+}
+
+.headerItem{
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    height: max-content;
+    width: max-content;
+    box-shadow: 2px 2px;
+}
+
+nav{
+    padding: 20px;
+}
+
+#navContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 66%;
+    height: fit-content;
+    border: 5px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 10px 10px;
+    padding: 10px;
+}
+
+#navList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.navLink{
+    margin: auto;
+}
+
+.navButton{
+    box-shadow: 2px 2px;
+    font-family: 'Permanent Marker', cursive;
+    box-sizing: border-box;
+}
+
+#mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 49.5%;
+    height: fit-content;
+    border: 5px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 10px 10px;
+    margin: auto;
+    padding: 10px;
+}
+
+.MCItem{
+    width: 100%;
+}
+
+.CORP{
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    height: max-content;
+    width: max-content;
+    box-shadow: 2px 2px;
+}
+
+.CPInput{
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    height: max-content;
+    width: max-content;
+    box-shadow: 2px 2px;
+    font-family: 'Permanent Marker', cursive;
+    box-sizing: border-box;
+}
+
+.CPButton{
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    height: max-content;
+    width: max-content;
+    box-shadow: 2px 2px;
+    font-family: 'Permanent Marker', cursive;
+    box-sizing: border-box;
+}
+
+.tableButton{
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    height: max-content;
+    width: max-content;
+    box-shadow: 2px 2px;
+    font-family: 'Permanent Marker', cursive;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.tableContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    border: 5px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 10px 10px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.progressTracker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 49.5%;
+    height: fit-content;
+    border: 5px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 10px 10px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.progress{
+    margin: 10px auto
+}
+
+.profile{
+    width: 100%;
+    height: max-content;
+    margin: 10PX auto;
+}

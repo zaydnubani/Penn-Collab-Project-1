@@ -154,5 +154,12 @@ border: 2px black solid;
     padding: 5px;
     font-size: 20px;
 }
+<<<<<<< HEAD
 
+=======
+*{ color: black;} 
+#pixela-graph{
+    margin-top: 25px;
+}
+>>>>>>> 8015cff9ca1d15587db6dd225c630597d58e31cc
 
