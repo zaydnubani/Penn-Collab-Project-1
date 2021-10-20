@@ -11,32 +11,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"/>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./matt.css" />
-    <link rel="stylesheet" href="./mike.css" />
+    <link rel="stylesheet" href="./bulma.css" />
 
 </head>
 <body>
 
-<header id="header-top">
-    <p  class=header-top-item id="currentDay"></p>
-    <h1 class=header-top-item>Profile tracker</h1>
-    <p class=header-top-item id="currentTime"></p>
+<header>
+    <div id="title" >Profile Tracker</div>
+    <div class="has-background-primary" id="timeItems">
+        <div class="headerItem has-background-warning-light" id="currentDay"></div>
+        <div class="headerItem has-background-warning-light" id="currentTime"></div>
+    </div>
 </header>
 
 <nav>
-    <div id="navContainer">
+    <div id="navContainer" class="has-background-warning">
         <ul id="navList">
             <li class="navLink">
-                <button id="firstLink">
+                <button class="navButton has-background-danger-light" id="firstLink">
             
                 </button>
             </li>
             <li class="navLink">
-                <button>
+                <button class="navButton has-background-danger-light">
                     "Nav Link 2 Goes Here"
                 </button>
             </li>
             <li class="navLink">
-                <button>
+                <button class="navButton has-background-danger-light">
                     "Nav Link 3 Goes Here"
                 </button>
             </li>
@@ -44,83 +46,109 @@
     </div>
 </nav>
 
-<section id="profileCreate">
-    <select id=PSelect>
-        <option value="profile">
-            "Profile"
-        </option>
-    </select>
-    <input type="text" name="PInput" id="PInput" placeholder="Type your input here & click Submit." />
-    <button id="profileInput">
-        "Submit"
-    </button>
-</section>
-
-<section id="criteriaCreate">
-    <select id=CSelect>
-        <option value="criteria">
-            "Criteria"
-        </option>
-    </select>
-    <input type="text" name="CInput" id="CInput" placeholder="Type your input here & click Submit." />
-    <button id="criteriaInput">
-        "Submit"
-    </button>
-</section>
-
-<section id="tableButton">
-     <button id="createTable">
-        "Submit"
-    </button>
-</section>
+<Section id="mainContainer" class="has-background-danger">
+    <section class="MCItem" id="profileCreate">
+        <div class="CORP has-background-light" id=PSelect value="profile">
+            Profile
+        </div>
+        <input type="text" name="PInput" id="PInput" class="CPInput has-background-light" placeholder="Type your input here & click Submit." />
+        <button class="CPButton has-background-light" id="profileInput">
+            Submit
+        </button>
+    </section>
     
-<section id="CPValueTable">
-    <table id="CPTable">
-        <tr id="tableHeader">
-            <th></th>
-            <th id="criteria1"></th>
-            <th id="criteria2"></th>
-        </tr>
-        <tr>
-            <td id="profile1"></td>
-            <td>
-                <input type="text" name="P1C1" id="P1C1" placeholder="Value#!" />
-            </td>
-            <td>
-                <input type="text" name="P1C2" id="P1C2" placeholder="Value#!" />
-            </td>
-        </tr>
-        <tr>
-            <td id="profile2"></td>
-            <td>
-                <input type="text" name="P2C1" id="P2C1" placeholder="Value#!" />
-            </td>
-            <td>
-                <input type="text" name="P2C2" id="P2C2" placeholder="Value#!" />
-            </td>
-        </tr>
-        <tr>
-            <td id="profile3"></td>
-            <td>
-                <input type="text" name="P3C1" id="P3C1" placeholder="Value#!" />
-            </td>
-            <td>
-                <input type="text" name="P3C2" id="P3C2" placeholder="Value#!" />
-            </td>
-        </tr>
-        <tr>
-            <td id="profile4"></td>
-            <td>
-                <input type="text" name="P4C1" id="P4C1" placeholder="Value#!" />
-            </td>
-            <td>
-                <input type="text" name="P4C2" id="P4C2" placeholder="Value#!" />
-            </td>
-        </tr>
-    </table>
+    <section class="MCItem" id="criteriaCreate">
+        <div class="CORP has-background-light" id=CSelect value="criteria">
+            Criteria
+        </div>
+        <input type="text" name="CInput" id="CInput" class="CPInput has-background-light" placeholder="Type your input here & click Submit." />
+        <button class="CPButton has-background-light" id="criteriaInput">
+            Submit
+        </button>
+    </section>
+    
+    <section class="MCItem" id="tableButton">
+         <button class="tableButton has-background-light" id="createTable">
+            Submit
+        </button>
+        <button class="tableButton has-background-light" id="resetTable">
+            Reset
+        </button>
+    </section>
+</Section>
+
+<section class="tableContainer has-background-info">
+    <section id="CPValueTable">
+        <table class="table is-striped is-hoverable has-background-light" id="CPTable">
+            <tr id="tableHeader">
+                <th></th>
+                <th class="has-background-primary" id="criteria1"></th>
+                <th class="has-background-warning" id="criteria2"></th>
+            </tr>
+            <tr class="has-background-info-light">
+                <td id="profile1"></td>
+                <td>
+                    <input type="text" name="P1C1" id="P1C1"  class="is-selected" placeholder="Value#!" />
+                </td>
+                <td>
+                    <input type="text" name="P1C2" id="P1C2" placeholder="Value#!" />
+                </td>
+            </tr>
+            <tr class="has-background-success-light">
+                <td id="profile2"></td>
+                <td>
+                    <input type="text" name="P2C1" id="P2C1" placeholder="Value#!" />
+                </td>
+                <td>
+                    <input type="text" name="P2C2" id="P2C2" class="is-selected" placeholder="Value#!" />
+                </td>
+            </tr>
+            <tr class="has-background-warning-light">
+                <td id="profile3"></td>
+                <td>
+                    <input type="text" name="P3C1" id="P3C1" class="is-selected" placeholder="Value#!" />
+                </td>
+                <td>
+                    <input type="text" name="P3C2" id="P3C2" placeholder="Value#!" />
+                </td>
+            </tr>
+            <tr class="has-background-danger-light">
+                <td id="profile4"></td>
+                <td>
+                    <input type="text" name="P4C1" id="P4C1" placeholder="Value#!" />
+                </td>
+                <td>
+                    <input type="text" name="P4C2" id="P4C2" class="is-selected" placeholder="Value#!" />
+                </td>
+            </tr>
+        </table>
+    </section>
 </section>
 
-<section id="CPValueGraph">
+<section class="progressTracker">
+    <div id="profile1" class="profile">
+        Profile 1
+        <progress id="PT1C1" class="progress"  max="100">15%</progress>
+        <progress id="PT1C2" class="progress"  max="100">15%</progress>
+    </div>
+    <div id="profile2" class="profile">
+        Profile 2
+        <progress id="PT2C1" class="progress" value="15" max="100">15%</progress>
+        <progress id="PT2C2" class="progress" value="15" max="100">15%</progress>
+    </div>
+    <div id="profile3" class="profile">
+        Profile 3
+        <progress id="PT3C1" class="progress" value="15" max="100">15%</progress>
+        <progress id="PT3C2" class="progress" value="15" max="100">15%</progress>
+    </div>
+    <div id="profile4" class="profile">
+        Profile 4
+        <progress id="PT4C1" class="progress" value="15" max="100">15%</progress>
+        <progress id="PT4C2" class="progress" value="15" max="100">15%</progress>
+    </div>
+</section>
+
+<!-- <section id="CPValueGraph">
     <table id="graph">
         <caption id="caption">"Graph Title"</caption>
         <thead>
@@ -197,7 +225,7 @@
         <div class="tick" style="height: 59px;"></div>
         <div class="tick" style="height: 59px;"></div>
     </div>
-</section>
+</section> -->
 
 <section id="supportingDocument">
     <div id="document">

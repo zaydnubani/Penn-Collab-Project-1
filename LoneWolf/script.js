@@ -86,7 +86,9 @@ var createTable = document.querySelector("#createTable");
 
 createTable.addEventListener("click", function(){
     table();
-    graph();
+    // graph();
+    progressTracker(0, PTprofile1, PT1C1, P1C1, PT1C2, P1C2);
+    testing();
 });
 
 function table(){
@@ -182,6 +184,53 @@ function graph() {
 }
 // Graph Start
 // ```
+
+// Profile 1
+var PTprofile1 = document.querySelector("#profile1");
+var P1C1 = document.querySelector("#P1C1");
+var P1C2 = document.querySelector("#P1C2");
+var PT1C1 = document.querySelector("#PT1C1");
+var PT1C2 = document.querySelector("#PT1C2");
+
+
+// Profile 2
+var PTprofile2 = document.querySelector("#profile2");
+var P2C1 = document.querySelector("#P2C1");
+var P2C2 = document.querySelector("#P2C2");
+var PT2C1 = document.querySelector("#PT2C1");
+var PT2C2 = document.querySelector("#PT2C2");
+
+
+// Profile 3
+var PTprofile3 = document.querySelector("#profile3");
+var P3C1 = document.querySelector("#P3C1");
+var P3C2 = document.querySelector("#P3C2");
+var PT3C1 = document.querySelector("#PT3C1");
+var PT3C2 = document.querySelector("#PT3C2");
+
+// Profile 4
+var PTprofile4 = document.querySelector("#profile4");
+var P4C1 = document.querySelector("#P4C1");
+var P4C2 = document.querySelector("#P4C2");
+var PT4C1 = document.querySelector("#PT4C1");
+var PT4C2 = document.querySelector("#PT4C2");
+
+function progressTracker(u, v, w, x, y, z){
+    var profile = JSON.parse(localStorage.getItem("profile"));
+    v.innerHTML = profile[u].input;
+    w.value = x;
+    y.value = z;
+}
+
+function testing(){
+    var profile = JSON.parse(localStorage.getItem("profile"));
+    // PTprofile1.innerHTML = profile[0].input;
+    PT1C1.setAttribute("value", "" + P1C1.value + "");
+    PT1C2.setAttribute("value", "" + P1C2.value + "");
+}
+
+
+
 
 
 
