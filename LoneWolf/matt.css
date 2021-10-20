@@ -169,4 +169,7 @@ border: 2px black solid;
     font-size: 20px;
 }
 *{ color: black;} 
+#pixela-graph{
+    margin-top: 25px;
+}
 
