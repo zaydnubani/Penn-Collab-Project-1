@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- head start -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
+    <!-- linking fonts / CSS Framework / CSS files -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
@@ -12,10 +14,12 @@
     <link rel="stylesheet" href="assets\css\bulma.css" />
     <link rel="stylesheet" href="assets\css\matt.css" />
     <link rel="stylesheet" href="assets\css\style.css" />
-
 </head>
+
+<!-- body start -->
 <body>
 
+<!-- header elements (green) -->
 <header>
     <div id="title" >Profile Tracker</div>
     <div class="has-background-primary" id="timeItems">
@@ -24,12 +28,13 @@
     </div>
 </header>
 
+<!-- nav Pixela elements (yellow) -->
 <nav>
     <div id="navContainer" class="has-background-warning">
         <ul id="navList">
             <li class="navLink">
                 <button class="navButton has-background-danger-light" id="firstLink">
-            Pixela Profile-Tracker
+                    Pixela Profile-Tracker
                 </button>
             </li>
             <li class="navLink">
@@ -40,12 +45,14 @@
             <li class="navLink">
                 <button class="navButton has-background-danger-light" id="thirdLink">
                     Pixela Website
+                </button>
             </li>
         </ul>
     </div>
 </nav>
 
-<Section id="mainContainer" class="has-background-danger">
+<!-- first input section (red) -->
+<section id="mainContainer" class="has-background-danger">
     <section class="MCItem" id="profileCreate">
         <div class="CORP has-background-light" id="PSelect" data-value="profile">
             Profile
@@ -74,8 +81,9 @@
             Reset
         </button>
     </section>
-</Section>
+</section>
 
+<!-- second input section (blue) -->
 <section class="tableContainer has-background-info">
     <section id="CPValueTable">
         <table class="table is-striped is-hoverable has-background-light" id="CPTable">
@@ -129,6 +137,7 @@
     </div>
 </section>
 
+<!-- graph section -->
 <section class="progressTracker">
     <div id="profile1" class="profile">
         <span id="PTR1">Profile 1</span>
@@ -152,11 +161,13 @@
     </div>
 </section>
 
+<!-- section for Pixela stats below graph -->
 <section>
     <div id="pixela-stats"> 
     </div>
 </section>
 
+<!-- reddit section (bottom) -->
 <section id="supportingDocument">
     <div id="document">
         <h1> Top r/productivity threads</h1>
