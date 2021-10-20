@@ -48,6 +48,22 @@ var newData = data.replace('20211020',currentDate);
 console.log(newData);
 $('#createtable').click( xhr.send(newData));
 
+// Change quantity
+
+var url = "https://pixe.la/v1/users/matt-crpss/graphs/project";
+
+var xhr = new XMLHttpRequest();
+xhr.open("POST", url);
+
+xhr.setRequestHeader( "X-USER-TOKEN", "yaaaaaaa");
+
+xhr.onreadystatechange = function () {
+   if (xhr.readyState === 4) {
+      console.log(xhr.status);
+      console.log(xhr.responseText);
+   }};
+
+var data = '{"date":"20211020","quantity":"45"}';
 // Change Quantity
 var profileLocal = JSON.parse(localStorage.getItem("PT1"));
 var criteriaValue1 = profileLocal[0].criteria1;
@@ -73,22 +89,7 @@ console.log(newValue);
 newValueString = newValue.toString();
 console.log(newValueString);
 // replace quantity with submitted tasks 
-var newQuantity = data.replace('quantity', newValueString )
-
-var url = "https://pixe.la/v1/users/matt-crpss/graphs/project";
-
-var xhr = new XMLHttpRequest();
-xhr.open("POST", url);
-
-xhr.setRequestHeader( "X-USER-TOKEN", "yaaaaaaa");
-
-xhr.onreadystatechange = function () {
-   if (xhr.readyState === 4) {
-      console.log(xhr.status);
-      console.log(xhr.responseText);
-   }};
-
-var data = '{"date":"20211020","quantity":"45"}';
+var newQuantity = data.replace('45', newValueString )
  $('#submitTable').click( xhr.send(newQuantity));
 console.log(newQuantity);
 console.log(data);
