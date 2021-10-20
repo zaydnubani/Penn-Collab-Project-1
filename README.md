@@ -29,4 +29,4 @@ I WANT a page that provides productivity resources.
 https://zaydnubani.github.io/Penn-Collab-Project-1/
 
 ## Screenshot
-![Screenshot of deployed application](path to deployed application)
+![Screenshot of deployed application](./assets/images/screenshot.png)
