@@ -1,4 +1,4 @@
-
+// On click sends user to respective link
   $('#firstLink').click(function(){
     window.location= "https://pixe.la/v1/users/matt-crpss/graphs/project.html"
   });
@@ -19,7 +19,7 @@
   });
 
 
-// Send Criteria to Pixela
+// Send Date to Pixela
 var url = "https://pixe.la/v1/users/matt-crpss/graphs/project";
 
 var xhr = new XMLHttpRequest();
