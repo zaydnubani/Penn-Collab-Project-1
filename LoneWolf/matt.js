@@ -8,6 +8,8 @@
   $('#thirdLink').click(function(){
     window.location= "https://pixe.la/"
   });
+
+// Fetch data and add to string 
   fetch('https://pixe.la/v1/users/matt-crpss/graphs/project/stats')
   .then(function (response) {
     return response.json();
