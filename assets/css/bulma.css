@@ -86,6 +86,11 @@ nav{
     padding: 10px;
 }
 
+#mainContainer p {
+    color: white;
+    margin: 10PX;
+}
+
 .MCItem{
     width: 100%;
 }
@@ -144,6 +149,10 @@ nav{
     box-shadow: 10px 10px;
     margin: 20px auto;
     padding: 10px;
+}
+
+.tableContainer p{
+    color: white;
 }
 
 .progressTracker{
