@@ -176,6 +176,25 @@ function PT1() {
     
 };
 
+// function Matt(){
+//     var PT1 = JSON.parse(localStorage.getItem("PT1"));
+//     data-value = `${PT1[0].criteria1}`
+//     variable.dataset.value = PT1[0].criteria1;
+//     PT1[0].criteria2;
+
+//     var PT2 = JSON.parse(localStorage.getItem("PT2"));
+//     PT2[0].criteria1;
+//     PT2[0].criteria2;
+
+//     var PT3 = JSON.parse(localStorage.getItem("PT3"));
+//     PT3[0].criteria1;
+//     PT3[0].criteria2;
+
+//     var PT4 = JSON.parse(localStorage.getItem("PT4"));
+//     PT4[0].criteria1;
+//     PT4[0].criteria2;
+// }
+
 function PT2() {
     var profile = JSON.parse(localStorage.getItem("profile"));
     // Load from local storage
