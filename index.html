@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- head start -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
+    <!-- linking fonts / CSS Framework / CSS files -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
@@ -12,10 +14,12 @@
     <link rel="stylesheet" href="assets\css\bulma.css" />
     <link rel="stylesheet" href="assets\css\matt.css" />
     <link rel="stylesheet" href="assets\css\style.css" />
-
 </head>
+
+<!-- body start -->
 <body>
 
+<!-- header elements (green) -->
 <header>
     <div id="title" >Profile Tracker</div>
     <div class="has-background-primary" id="timeItems">
@@ -24,12 +28,13 @@
     </div>
 </header>
 
+<!-- nav Pixela elements (yellow) -->
 <nav>
     <div id="navContainer" class="has-background-warning">
         <ul id="navList">
             <li class="navLink">
                 <button class="navButton has-background-danger-light" id="firstLink">
-            Pixela Profile-Tracker
+                    Pixela Profile-Tracker
                 </button>
             </li>
             <li class="navLink">
@@ -40,14 +45,20 @@
             <li class="navLink">
                 <button class="navButton has-background-danger-light" id="thirdLink">
                     Pixela Website
+                </button>
             </li>
         </ul>
     </div>
 </nav>
 
+<<<<<<< HEAD
 <Section id="mainContainer" class="has-background-danger">
     <p>Input a profile and click Submit! You can do this up to 4 times...</p>
     
+=======
+<!-- first input section (red) -->
+<section id="mainContainer" class="has-background-danger">
+>>>>>>> d0b03bdddffa7973d37caf416e02ffd3881bb8b0
     <section class="MCItem" id="profileCreate">
         <div class="CORP has-background-light" id="PSelect" data-value="profile">
             Profile
@@ -78,8 +89,9 @@
             Reset
         </button> -->
     </section>
-</Section>
+</section>
 
+<!-- second input section (blue) -->
 <section class="tableContainer has-background-info">
     <p>Input a number value for each profile and criteria then click Submit!</p>
     <section id="CPValueTable">
@@ -134,8 +146,9 @@
     </div>
 </section>
 
-<section class="progressTracker has-background-light">
-    <div id="profile1" class="profile has-background-info-light">
+<!-- graph section -->
+<section class="progressTracker">
+    <div id="profile1" class="profile">
         <span id="PTR1">Profile 1</span>
         <progress id="PT1C1" class="progress has-background-primary"  max="100"></progress>
         <progress id="PT1C2" class="progress has-background-warning"  max="100"></progress>
@@ -157,33 +170,32 @@
     </div>
 </section>
 
-<!-- <section>
+<!-- section for Pixela stats below graph -->
+<section>
     <div id="pixela-stats"> 
     </div>
 </section> -->
 
-<section class="supportingDocument has-background-light">
-    <div id="document" class="has-background-info-light">
-        <h1 class="title is-5"> Top r/productivity threads</h1>
+<!-- reddit section (bottom) -->
+<section id="supportingDocument">
+    <div id="document">
+        <h1> Top r/productivity threads</h1>
         <p>Below are the top three reddit threads in the productivity subreddit</p>
     </div>
     <div id="article" class="has-background-danger-light">
         <ul id="articleList">
-            <li id="articlepoint1" class="articlePoint has-background-warning-light">
-            
-            </li>
-            <li id="articlepoint2" class="articlePoint has-background-warning-light">
-            
-            </li>
-            <li id= "articlepoint3" class="articlePoint has-background-warning-light">
-            
-            </li>
+            <li id="articlepoint1" class="articlePoint"></li>
+            <li id="articlepoint2" class="articlePoint"></li>
+            <li id= "articlepoint3" class="articlePoint"></li>
         </ul>
     </div>
 </section>
+
+<!-- linking script files -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="assets\js\reddit-script.js"></script>
 <script src="assets\js\script.js"></script>
 <script src="assets\js\matt.js"></script>
+
 </body>

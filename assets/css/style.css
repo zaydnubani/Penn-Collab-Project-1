@@ -12,19 +12,19 @@
 
 /* Nav Start */
 /* ``` */
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#navList{
+#navList {
     display: flex;
     flex-direction: row;
     list-style: none;
 }
 
-.navLink{
+.navLink {
     padding: 0px 20px 0px 20px;
 }
 /* ``` */
@@ -32,30 +32,31 @@ nav{
 
 /* Profile Input Start */
 /* ``` */
-#profileCreate{
+#profileCreate {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
 
-#PSelect{
+#PSelect {
     margin-right: 20px;
 }
 
-#PInput{
+#PInput {
     width: 250px;
 }
 
-#profileInput{
+#profileInput {
     margin-left: 20px;
 }
+
 /* ``` */
 /* Profile Input End */
 
 /* Criteria Input Start */
 /* ``` */
-#criteriaCreate{
+#criteriaCreate {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,23 +64,24 @@ nav{
     padding-top: 15px;
 }
 
-#CSelect{
+#CSelect {
     margin-right: 20px;
 }
 
-#CInput{
+#CInput {
     width: 250px;
 }
 
-#criteriaInput{
+#criteriaInput {
     margin-left: 20px;
 }
+
 /* ``` */
 /* Criteria Input End */
 
 /* Criteria & Profile Value Input Start */
 /* ``` */
-#CPValue{
+#CPValue {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,25 +89,25 @@ nav{
     padding-top: 15px;
 }
 
-#profileSelect{
+#profileSelect {
     margin-right: 20px;
 }
 
-#criteriaSelect{
+#criteriaSelect {
     margin-right: 20px;
 }
 
-#inputValue{
+#inputValue {
     width: 250px;
 }
 
-#submitValue{
+#submitValue {
     margin-left: 20px;
 }
+
 /* ``` */
 /* Criteria & Profile Value Input End */
-
-#tableButton{
+#tableButton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,13 +115,13 @@ nav{
     padding-top: 15px;
 }
 
-#createTable{
+#createTable {
     margin-left: 20px;
 }
 
 /* Criteria & Profile Value Input Table Start*/
 /* ``` */
-#CPValueTable{
+#CPValueTable {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,23 +129,15 @@ nav{
     padding-top: 15px;
 }
 
-#CPTable{
+#CPTable {
     border: 1px solid rgba(150, 212, 212, 0.4);
 }
 
-#tableHeader{
-    
-}
-
-th{
+th {
     padding: 10px;
 }
 
-#tableRow{
-
-}
-
-td{
+td {
     padding: 10px;
 }
 
@@ -159,7 +153,7 @@ th:nth-child(even),td:nth-child(even) {
 
 /* Criteria & Profile Value Input Graph Start */
 /* ``` */
-#CPValueGraph{
+#CPValueGraph {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,7 +161,7 @@ th:nth-child(even),td:nth-child(even) {
     padding-top: 15px;
 }
 
-#temporary{
+#temporary {
     padding: 15px 0px 15px 0px;
 }
 
@@ -193,7 +187,7 @@ th:nth-child(even),td:nth-child(even) {
     font-weight: bold;
 }
   
-#graph tr, #graph th, #graph td { 
+#graph tr, #graph th, #graph td {
     position: absolute;
     bottom: 0; 
     width: 150px; 
@@ -203,7 +197,7 @@ th:nth-child(even),td:nth-child(even) {
     text-align: center;
 }
 
-#graph tbody th{
+#graph tbody th {
     bottom: -20px;
 }
 
@@ -255,7 +249,6 @@ th:nth-child(even),td:nth-child(even) {
     left: 300px;
 }
 
-
 #graph #q4 {left: 450px; border-right: none;}
   #q-graph tbody th {bottom: -1.75em; vertical-align: top;
   font-weight: normal; color: #333;}
@@ -273,20 +266,19 @@ th:nth-child(even),td:nth-child(even) {
     opacity: .4;
 }
 
-#graph .sent{
+#graph .sent {
     left: 13px; 
     background-color: lightblue;
     border-color: transparent;
 }
 
-#graph .paid{
+#graph .paid {
     left: 77px; 
     background-color: yellow;
     border-color: transparent;
 }
   
-  
-  #ticks {
+#ticks {
     position: relative; 
     top: -300px; 
     left: 2px;
@@ -296,42 +288,47 @@ th:nth-child(even),td:nth-child(even) {
     margin-bottom: -300px;
     font-size: 10px;
     font-family: "fira-sans-2", Verdana, sans-serif;
-  }
+}
   
-  #ticks .tick {
+#ticks .tick {
     position: relative; 
     border-bottom: 1px dotted #C4C4C4; 
     width: 600px;
-  }
+}
   
-  #ticks .tick p {
-    position: absolute; 
-    left: -5em; 
-    top: -0.8em; 
-    margin: 0 0 0 0.5em;
-  }
+#ticks .tick p {
+position: absolute; 
+left: -5em; 
+top: -0.8em; 
+margin: 0 0 0 0.5em;
+}
 /* ``` */
 /* Criteria & Profile Value Input Graph End */
 
 /* Supporting Documents & Articles Start */
 /* ``` */
-#supportingDocument{
+#supportingDocument {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 30px;
 }
 
-#document{
+#document {
     width: 80%;
     height: fit-content;
-    border: 1px solid black;
     margin-bottom: 10px;
+    border: 5px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 10px 10px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgb(255, 124, 205);
 }
 
 #document > h1 {
     text-align: center;
+    font-size: 25px;
 }
 
 #document > p { 
@@ -341,12 +338,17 @@ th:nth-child(even),td:nth-child(even) {
 #article {
     width: 80%;
     height: fit-content;
-    border: 1px solid black;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     justify-content: space-around;
+    border: 5px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 10px 10px;
+    margin: 5px auto 30px auto;
+    padding: 10px;
+    background-color: rgb(255, 124, 205);
 }
 
-#articleList{
+#articleList {
     justify-content: space-evenly;
     display: flex;
     flex-direction: row;
@@ -354,11 +356,15 @@ th:nth-child(even),td:nth-child(even) {
     margin-top: 10px;
 }
 
-.articlePoint{
+.articlePoint {
     height: fit-content;
     width: 300px;
-    border: 1px solid black;
     margin: 0px 10px 25px 10px;
+    border: 5px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: 10px 10px;
+    margin: 20px auto;
+    padding: 10px;
 }
 
 .articlePoint {

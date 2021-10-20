@@ -1,3 +1,4 @@
+// verifying that the script is connected
 console.log("matt.js is connected");
 
 // On click sends user to respective link
