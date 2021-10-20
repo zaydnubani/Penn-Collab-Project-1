@@ -17,7 +17,7 @@
 <body>
 
 <header id="header-top">
-    <p class=header-top-item id="currentDay"></p>
+    <p  class=header-top-item id="currentDay"></p>
     <h1 class=header-top-item>Profile tracker</h1>
     <p class=header-top-item id="currentTime"></p>
 </header>
@@ -69,13 +69,8 @@
     </button>
 </section>
 
-<section id="CPValue">
-    <select id="profileSelect">
-    </select>
-    <select id="criteriaSelect">
-    </select>
-    <input type="text" name="valueInput" id="valueInput" placeholder="Type your value here & click Submit." />
-    <button id="submitValue">
+<section id="tableButton">
+     <button id="createTable">
         "Submit"
     </button>
 </section>
@@ -83,24 +78,50 @@
 <section id="CPValueTable">
     <table id="CPTable">
         <tr id="tableHeader">
-            <th id="Name">"Profile"</th>
-            <th id="criteria1">"Criteria 1"</th>
-            <th id="criteria2">"Criteria 2"</th>
+            <th></th>
+            <th id="criteria1"></th>
+            <th id="criteria2"></th>
         </tr>
-        <!-- <tr class="tableRow">
-            <td id="profileinput">"Profile 1 Value"</td>
-            <td id="profileCriteria1">"Profile 1 Criteria 1 Value"</td>
-            <td>"Profile 1 Criteria 2 Value"</td>
-            < !-- JS create element -->
+        <tr>
+            <td id="profile1"></td>
+            <td>
+                <input type="text" name="P1C1" id="P1C1" placeholder="Value#!" />
+            </td>
+            <td>
+                <input type="text" name="P1C2" id="P1C2" placeholder="Value#!" />
+            </td>
         </tr>
-            <!-- JS create element -->
+        <tr>
+            <td id="profile2"></td>
+            <td>
+                <input type="text" name="P2C1" id="P2C1" placeholder="Value#!" />
+            </td>
+            <td>
+                <input type="text" name="P2C2" id="P2C2" placeholder="Value#!" />
+            </td>
+        </tr>
+        <tr>
+            <td id="profile3"></td>
+            <td>
+                <input type="text" name="P3C1" id="P3C1" placeholder="Value#!" />
+            </td>
+            <td>
+                <input type="text" name="P3C2" id="P3C2" placeholder="Value#!" />
+            </td>
+        </tr>
+        <tr>
+            <td id="profile4"></td>
+            <td>
+                <input type="text" name="P4C1" id="P4C1" placeholder="Value#!" />
+            </td>
+            <td>
+                <input type="text" name="P4C2" id="P4C2" placeholder="Value#!" />
+            </td>
+        </tr>
     </table>
 </section>
 
 <section id="CPValueGraph">
-    <h1 id="temporary">
-        "Criteria & Profile Value Input Graph Goes Here"
-    </h1>
     <table id="graph">
         <caption id="caption">"Graph Title"</caption>
         <thead>
@@ -109,16 +130,61 @@
         </thead>
         <tbody>
             <tr class="qtr" id="profile1">
-                <th scope="row">
+                <th id="P1Tag" scope="row">
                 "Profile 1"
                 </th>
-                <td class="sent bar" style="height: 111px;">
-                    <p>
+                <td id="P1V1Bar" class="sent bar">
+                    <p id="P1V1">
                         "Value 1 Here"
                     </p>
                 </td>
-                <td class="paid bar" style="height: 99px;">
-                    <p>
+                <td id="P1V2Bar" class="paid bar">
+                    <p id="P1V2">
+                        "Value 2 Here"
+                    </p>
+                </td>
+            </tr>
+            <tr class="qtr" id="profile2">
+                <th id="P2Tag" scope="row">
+                "Profile 2"
+                </th>
+                <td class="sent bar" id="P2V1Bar">
+                    <p id="P2V1">
+                        "Value 1 Here"
+                    </p>
+                </td>
+                <td class="paid bar" id="P2V2Bar">
+                    <p id="P2V2">
+                        "Value 2 Here"
+                    </p>
+                </td>
+            </tr>
+            <tr class="qtr" id="profile3">
+                <th id="P3Tag" scope="row">
+                "Profile 3"
+                </th>
+                <td class="sent bar" id="P3V1Bar">
+                    <p id="P3V1">
+                        "Value 1 Here"
+                    </p>
+                </td>
+                <td class="paid bar" id="P3V2Bar">
+                    <p id="P3V2">
+                        "Value 2 Here"
+                    </p>
+                </td>
+            </tr>
+            <tr class="qtr" id="q4">
+                <th id="P4Tag" scope="row">
+                "Profile 4"
+                </th>
+                <td class="sent bar" id="P4V1Bar">
+                    <p id="P4V1">
+                        "Value 1 Here"
+                    </p>
+                </td>
+                <td class="paid bar" id="P4V2Bar">
+                    <p id="P4V2">
                         "Value 2 Here"
                     </p>
                 </td>
@@ -126,11 +192,11 @@
         </tbody>
     </table>
     <div id="ticks">
-        <div class="tick" style="height: 59px;"><p>$50,000</p></div>
-        <div class="tick" style="height: 59px;"><p>$40,000</p></div>
-        <div class="tick" style="height: 59px;"><p>$30,000</p></div>
-        <div class="tick" style="height: 59px;"><p>$20,000</p></div>
-        <div class="tick" style="height: 59px;"><p>$10,000</p></div>
+        <div class="tick" style="height: 59px;"></div>
+        <div class="tick" style="height: 59px;"></div>
+        <div class="tick" style="height: 59px;"></div>
+        <div class="tick" style="height: 59px;"></div>
+        <div class="tick" style="height: 59px;"></div>
     </div>
     <div id="pixela-graph"> 
     </div>
