@@ -76,16 +76,41 @@
 // Express Graph
 // $ curl -X GET https://pixe.la/v1/users/matt-crpss/graphs/project?date=20211010&mode=short&appearance=dark
 // {/* <svg xmlns="http://www.w3.org/2000/svg" width="220" height="135" //
-  var requestURL =  "https://pixe.la/@matt-crpss"
-  $.ajax({
-    url: requestURL,
-    method: 'GET',
-  }).then(function(response){
-   var displayGraph = response;
-   console.log(displayGraph);
-    var anchor= $('<a />');
-    // anchor.attr('href', displayGraph);
-    anchor.text("Pixela")
-    $('#firstLink').append(anchor);
+  // var requestURL =  " https://pixe.la/matt-crpss/X-USER-TOKEN:yaaaaaaa/displayName:matt-cross"
+  // $.ajax({
+  //   url: requestURL,
+  //   method: 'PUT',
+  // }).then(function(response){
+  //  var displayGraph = response;
+  //  console.log(displayGraph);
+  //  console.log($("#pixela-graph"))
+  //  $("#pixela-graph").html(displayGraph);
+ 
+
+  //   // var anchor= $('<a />');
+  //   // anchor.attr('href', displayGraph);
+  //   // anchor.text("Pixela")
+  //   // $('#firstLink').append(anchor);
+  // });
+  $('#firstLink').click(function(){
+    window.location= "https://pixe.la/v1/users/matt-crpss/graphs/project.html"
   });
-  $(anchor).click(document.location(response));
+  fetch('https://pixe.la/v1/users/matt-crpss/graphs/project/stats')
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+    var dataString = JSON.stringify(data);
+    $("#pixela-graph").text(dataString);
+  });
+
+  fetch('https://pixe.la/v1/users/matt-crpss/graphs/project/stats')
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+    var dataString = JSON.stringify(data);
+    $("#pixela-graph").text(dataString);
+  });
