@@ -95,12 +95,14 @@
   $('#firstLink').click(function(){
     window.location= "https://pixe.la/v1/users/matt-crpss/graphs/project.html"
   });
+
   $('#secondLink').click(function(){
     window.location= "https://pixe.la/v1/users/matt-crpss/graphs/project"
   });
   $('#thirdLink').click(function(){
     window.location= "https://pixe.la/v1/users/matt-crpss/graphs/project.html"
   });
+
   fetch('https://pixe.la/v1/users/matt-crpss/graphs/project/stats')
   .then(function (response) {
     return response.json();
@@ -110,6 +112,18 @@
     var dataString = JSON.stringify(data);
     $("#pixela-graph").text(dataString);
   });
+
+
+  fetch('https://pixe.la/v1/users/matt-crpss/graphs/project/stats')
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+    var dataString = JSON.stringify(data);
+    $("#pixela-graph").text(dataString);
+  });
+
 
 //   import request from 'request';
 //   var  options = {
@@ -143,3 +157,4 @@ var data = '{"date":"20211020","quantity":"9"}';
 xhr.send(data);
 
 console.log(data);
+
