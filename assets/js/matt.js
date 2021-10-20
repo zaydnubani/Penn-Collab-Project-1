@@ -19,7 +19,7 @@ console.log("matt.js is connected");
   .then(function (data) {
     console.log(data);
     var dataString = JSON.stringify(data);
-    $("#pixela-graph").text(dataString);
+    $("#pixela-stats").text(dataString);
   });
 
 
