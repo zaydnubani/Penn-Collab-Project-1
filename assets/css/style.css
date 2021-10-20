@@ -27,6 +27,12 @@ nav {
 .navLink {
     padding: 0px 20px 0px 20px;
 }
+
+#instructions {
+    padding: 0px;
+    border: 5px black solid;
+    margin: 0px auto 10px auto;
+}
 /* ``` */
 /* Nav End */
 
@@ -315,6 +321,7 @@ margin: 0 0 0 0.5em;
 }
 
 #document {
+    width: 80%;
     height: fit-content;
     margin-bottom: 10px;
     border: 5px solid lightgrey;
@@ -335,6 +342,7 @@ margin: 0 0 0 0.5em;
 }
 
 #article {
+    width: 80%;
     height: fit-content;
     margin-bottom: 20px;
     justify-content: space-around;
@@ -349,7 +357,7 @@ margin: 0 0 0 0.5em;
 #articleList {
     justify-content: space-evenly;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     margin-top: 10px;
 }
