@@ -27,6 +27,12 @@ nav {
 .navLink {
     padding: 0px 20px 0px 20px;
 }
+
+#instructions {
+    padding: 0px;
+    border: 5px black solid;
+    margin: 0px auto 10px auto;
+}
 /* ``` */
 /* Nav End */
 

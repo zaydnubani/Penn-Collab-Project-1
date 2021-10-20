@@ -28,6 +28,11 @@ header{
     box-shadow: 10px 10px;
 }
 
+#clock {
+    width:85px;
+    text-align: center;
+}
+
 .headerItem{
     margin: auto;
     border-radius: 10px;
@@ -84,6 +89,11 @@ nav{
     box-shadow: 10px 10px;
     margin: auto;
     padding: 10px;
+}
+
+#mainContainer p {
+    color: white;
+    margin: 10PX;
 }
 
 .MCItem{
@@ -146,6 +156,10 @@ nav{
     padding: 10px;
 }
 
+.tableContainer p{
+    color: white;
+}
+
 .progressTracker{
     display: flex;
     justify-content: center;
@@ -168,4 +182,5 @@ nav{
     width: 100%;
     height: max-content;
     margin: 10PX auto;
+    border-radius: 10px;
 }

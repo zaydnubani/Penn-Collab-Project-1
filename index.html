@@ -53,6 +53,9 @@
 
 <!-- first input section (red) -->
 <section id="mainContainer" class="has-background-danger">
+
+    <p>Input a profile and click Submit! You can do this up to 4 times...</p>
+
     <section class="MCItem" id="profileCreate">
         <div class="CORP has-background-light" id="PSelect" data-value="profile">
             Profile
@@ -62,6 +65,8 @@
             Submit
         </button>
     </section>
+
+    <p>Input a criteria and click Submit! You can do this up to 2 times...</p>
     
     <section class="MCItem" id="criteriaCreate">
         <div class="CORP has-background-light" id="CSelect" data-value="criteria">
@@ -77,14 +82,15 @@
          <button class="tableButton has-background-light" id="createTable">
             Submit
         </button>
-        <button class="tableButton has-background-light" id="resetTable">
+        <!-- <button class="tableButton has-background-light" id="resetTable">
             Reset
-        </button>
+        </button> -->
     </section>
 </section>
 
 <!-- second input section (blue) -->
 <section class="tableContainer has-background-info">
+    <p>Input a number value for each profile and criteria then click Submit!</p>
     <section id="CPValueTable">
         <table class="table is-striped is-hoverable has-background-light" id="CPTable">
             <tr id="tableHeader">
@@ -132,7 +138,7 @@
     </section>
     <div>
         <button class="tableButton has-background-light" id="submitTable">
-            submitTable
+            submit
         </button>
     </div>
 </section>
@@ -141,31 +147,31 @@
 <section class="progressTracker">
     <div id="profile1" class="profile">
         <span id="PTR1">Profile 1</span>
-        <progress id="PT1C1" class="progress"  max="100">15%</progress>
-        <progress id="PT1C2" class="progress"  max="100">15%</progress>
+        <progress id="PT1C1" class="progress has-background-primary"  max="100"></progress>
+        <progress id="PT1C2" class="progress has-background-warning"  max="100"></progress>
     </div>
-    <div id="profile2" class="profile">
+    <div id="profile2" class="profile has-background-success-light">
         <span id="PTR2">Profile 2</span>
-        <progress id="PT2C1" class="progress"  max="100">15%</progress>
-        <progress id="PT2C2" class="progress"  max="100">15%</progress>
+        <progress id="PT2C1" class="progress has-background-primary"  max="100"></progress>
+        <progress id="PT2C2" class="progress has-background-warning"  max="100"></progress>
     </div>
-    <div id="profile3" class="profile">
+    <div id="profile3" class="profile has-background-warning-light">
         <span id="PTR3">Profile 3</span>
-        <progress id="PT3C1" class="progress"  max="100">15%</progress>
-        <progress id="PT3C2" class="progress"  max="100">15%</progress>
+        <progress id="PT3C1" class="progress has-background-primary"  max="100"></progress>
+        <progress id="PT3C2" class="progress has-background-warning"  max="100"></progress>
     </div>
-    <div id="profile4" class="profile">
+    <div id="profile4" class="profile has-background-danger-light">
         <span id="PTR4">Profile 4</span>
-        <progress id="PT4C1" class="progress" max="100">15%</progress>
-        <progress id="PT4C2" class="progress" max="100">15%</progress>
+        <progress id="PT4C1" class="progress has-background-primary" max="100"></progress>
+        <progress id="PT4C2" class="progress has-background-warning" max="100"></progress>
     </div>
 </section>
 
 <!-- section for Pixela stats below graph -->
-<section>
+<!-- <section>
     <div id="pixela-stats"> 
     </div>
-</section>
+</section> -->
 
 <!-- reddit section (bottom) -->
 <section id="supportingDocument">
@@ -173,7 +179,7 @@
         <h1> Top r/productivity threads</h1>
         <p>Below are the top three reddit threads in the productivity subreddit</p>
     </div>
-    <div id="article">
+    <div id="article" class="articlePoint">
         <ul id="articleList">
             <li id="articlepoint1" class="articlePoint"></li>
             <li id="articlepoint2" class="articlePoint"></li>
