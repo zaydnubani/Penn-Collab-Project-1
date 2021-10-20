@@ -5,7 +5,12 @@ var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 $("#currentTime").text(today.format("h:mm a"));
 
-// Criteria Create Start
+function update() {
+    $('#clock').html(moment().format('h:mm:ss'));
+  }
+  
+  setInterval(update, 1000);
+  // Criteria Create Start
 // ```
 var criteriaInput = document.querySelector("#criteriaInput");
 
