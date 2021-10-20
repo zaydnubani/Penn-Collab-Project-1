@@ -1,3 +1,5 @@
+console.log("matt.js is connected");
+
 // On click sends user to respective link
   $('#firstLink').click(function(){
     window.location= "https://pixe.la/v1/users/matt-crpss/graphs/project.html"
