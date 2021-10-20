@@ -1,10 +1,9 @@
+// verifying that the script is connected
 console.log("script.js connected");
 
 // header js
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
-$("#currentTime").text(today.format("h:mm a"));
-
 function update() {
     $('#clock').html(moment().format('h:mm:ss'));
   }
@@ -235,15 +234,3 @@ function PT4() {
 
 // ```
 // Progress Tracker End
-
-
-
-
-
-var today = moment();
-$("#currentDay").text(today.format("dddd, MMMM Do"));
-$("#currentTime").text(today.format("h:mm a"));
-
-// console.log("i'm connected")
-console.log("i'm connected");
-
