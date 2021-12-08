@@ -43,7 +43,7 @@ var data = '{"date":"20211020","quantity":"45"}';
 // Turn string into current date
 // Add moment.date() to test function
 
-var currentDate = moment().date().format('YYYYMMDD');
+var currentDate = moment().format('YYYYMMDD');
 var newData = data.replace('20211020',currentDate);
 console.log(newData);
 $('#submitTable').click( xhr.send(newData));
